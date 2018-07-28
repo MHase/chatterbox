@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class ChatRoomTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @chat_room = ChatRoom.new(title: "TitleString")
+  end
+
+  test 'should be a valid title' do
+      assert @chat_room.title.valid?
+  end
+
 end
