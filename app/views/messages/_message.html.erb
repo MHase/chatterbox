@@ -1,2 +1,20 @@
-<span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
-<%= message.body %>
+<div class="msg-box">
+  <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-md-1">
+          <%= gravatar_for message.user %>
+        </div>
+        <div class="col-md-11">
+          <p class="card-text">
+            <small class="text-muted">
+              <%= message.user.name %> about <em><%= "#{time_ago_in_words(message.created_at)} ago" %></em>
+            </small>
+            <br>
+            <%= message.body %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

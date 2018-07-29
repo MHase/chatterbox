@@ -1,16 +1,19 @@
 <h1><%= @chat_room.title %></h1>
 
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <% render @chat_room.messages %>
+  <%= render @chat_room.messages %>
 </div>
+
+<hr>
 
 <%= form_for @message, url: '#' do |f| %>
-<div class="form-group">
-  <%= f.label :body %>
-  <%= f.text_area :body, class: 'form_control' %>
+<span class="msg-input">
   <small class="text-muted">From 2 to 1000 characters</small>
-</div>
-
-
-<%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+  <div class="input-group mb-3">
+    <%= f.text_field :body, class: "form-control", rows: 1, placeholder: "Message", aria_label:"Message", aria_describedby: "basic-addon2", autofocus: "autofocus", autocomplete: "off" %>
+    <div class="input-group-append">
+      <%= f.submit "Send", class: "btn btn-primary" %>
+    </div>
+  </div>
+</span>
 <% end %>

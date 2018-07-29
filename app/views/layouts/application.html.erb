@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Chatterbox</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>ChatterBox</title>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<body>
 
-    <%= yield %>
-  </body>
+  <nav class="navbar">
+    <%= link_to 'ChatterBox', root_path, class: 'logo' %>
+
+
+    <ul class="nav nav-pills pull-xs-right">
+      <% if user_signed_in? %>
+      <div class="dropleft">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="menu-label"><strong><%= current_user.name %></strong></span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to 'Account Settings', '#', class: "dropdown-item" %>
+          <%= link_to 'Help', '#', class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Logout', destroy_user_session_path, class: "dropdown-item", method: :delete %>
+        </div>
+      </div>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to 'Login', new_user_session_path, class: "nav-link"  %>
+      </li>
+      <% end %>
+    </ul>
+  </nav>
+  <div class="page-wrap">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p class="text-muted">ChatterBox</p>
+  </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </html>
