@@ -1,7 +1,13 @@
 <h1>Chat rooms</h1>
 
-<p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
-
-<ul>
+<div id="room-index">
+<% if @chat_rooms.size < 1 # Checks to see if room index is empty or not.%>
+  <h1 id="no-room" align="center">Looks like this place is a little empty.  Why don't you make a room?</h1>
+<% else %>
+<ul class="row">
   <%= render @chat_rooms %>
 </ul>
+<% end %>
+<br>
+<p align="center" class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'new-buttons' %></p>
+</div>

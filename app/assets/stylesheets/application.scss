@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+
 * {
   padding: 0px;
   margin: 0px;
+}
+
+input, button {
+  border: none;
+}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
 }
 
 html{
@@ -26,8 +39,9 @@ body {
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: lightgrey;
+  font-family: 'Fugaz One', cursive;
   &:hover {
     text-decoration: none;
     color: white;
@@ -48,12 +62,60 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.card{
+#send-buttons {
+  background-color: teal;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  &:hover {
+    background-color: #573c7a;
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 10px black;
+    transition: .5s;
+    cursor: pointer;
+  }
+}
+
+.new-buttons {
+  background-color: teal;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  &:hover {
+    background-color: #573c7a;
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 10px black;
+    padding: 23px;
+    transition: .5s;
+    cursor: pointer;
+  }
+}
+
+.msg-card{
+  padding: 1%;
+  border-bottom: 1px lightgray solid;
+}
+
+.card {
   padding: 1%;
 }
 
+.msg-card:hover,
 .card:hover {
   background-color: #f7f7f7;
+}
+
+.room {
+  width: 18rem;
+  margin: 10px auto 10px auto;
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .msg-box {
@@ -68,8 +130,27 @@ h1 {
     }
 }
 
+#room-index {
+  padding: 10%;
+}
+
+@media only screen and (max-width: 900px) {
+  #room-index {
+    padding: 50px;
+  }
+}
+
+#no-room{
+  margin: auto;
+}
+
+#no-msg {
+
+}
+
 #messages {
   max-height: 550px;
+  min-height: 550px;
   overflow-y: auto;
   .avatar {
     margin: 0.5rem;

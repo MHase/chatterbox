@@ -1,1 +1,11 @@
-<li><%= link_to "Enter #{chat_room.title}", chat_room_path(chat_room) %></li>
+<%= link_to chat_room_path(chat_room), class: "card room", align: "center" do %>
+    <h2><%= "#{chat_room.title}" %></h2>
+    <p><strong><%= "#{chat_room.messages.size}" %></strong>
+
+    <% if chat_room.messages.size > 1 || chat_room.messages.size == 0  # Checks to see how many messages in each room %>
+      Messages
+    <% else %>
+      Message
+    <% end %>
+    </p>
+<% end %>
