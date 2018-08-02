@@ -90,3 +90,4 @@ Rails.application.configure do
                                                  'http://chatterbocks.herokuapp.com']
 
   config.web_socket_server_url = "wss://chatterbocks.herokuapp.com/cable"
+end
