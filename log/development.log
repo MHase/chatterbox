@@ -14871,3 +14871,25 @@ Processing by ChatRoomsController#index as HTML
 Completed 200 OK in 99ms (Views: 95.5ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-01 20:02:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "chat_rooms"[0m
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."chat_room_id" = ?[0m  [["chat_room_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."chat_room_id" = ?[0m  [["chat_room_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."chat_room_id" = ?[0m  [["chat_room_id", 26]]
+  Rendered collection of chat_rooms/_chat_room.html.erb [1 times] (29.4ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (49.0ms)
+Started GET "/cable" for 127.0.0.1 at 2018-08-01 20:02:22 -0400
+Completed 200 OK in 392ms (Views: 329.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-08-01 20:02:22 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [matthewprimpas@gmail.com] Registered connection (Z2lkOi8vY2FibGUtY2hhdC9Vc2VyLzE)
+[ActionCable] [matthewprimpas@gmail.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [matthewprimpas@gmail.com] ChatRoomsChannel is streaming from chat_rooms_26_channel

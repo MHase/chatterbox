@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One");
+/* line 3, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 8, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+input, button {
+  border: none;
+}
+
+/* line 12, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+::-moz-selection {
+  background: #ffb7b7;
+  /* WebKit/Blink Browsers */
+}
+::selection {
+  background: #ffb7b7;
+  /* WebKit/Blink Browsers */
+}
+
+/* line 15, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+::-moz-selection {
+  background: #ffb7b7;
+  /* Gecko Browsers */
+}
+
+/* line 19, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+html {
+  height: 100%;
+}
+
+/* line 23, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+body {
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 33, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.navbar-nav .nav-item span {
+  display: block;
+}
+
+/* line 37, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.navbar {
+  background-color: #573c7a;
+}
+
+/* line 41, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.logo {
+  font-size: 3rem;
+  color: lightgrey;
+  font-family: 'Fugaz One', cursive;
+}
+/* line 45, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.logo:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 52, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.container {
+  margin-top: 2%;
+  min-height: 100%;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+/* line 60, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 65, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#send-buttons {
+  background-color: teal;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+/* line 71, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#send-buttons:hover {
+  background-color: #573c7a;
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 1px 10px black;
+  transition: .5s;
+  cursor: pointer;
+}
+
+/* line 81, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.new-buttons {
+  background-color: teal;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+/* line 87, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.new-buttons:hover {
+  background-color: #573c7a;
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 1px 10px black;
+  padding: 23px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+/* line 98, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-card {
+  padding: 1%;
+  border-bottom: 1px lightgray solid;
+}
+
+/* line 103, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.card {
+  padding: 1%;
+}
+
+/* line 107, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-card:hover,
+.card:hover {
+  background-color: #f7f7f7;
+}
+
+/* line 112, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.room {
+  width: 18rem;
+  margin: 10px auto 10px auto;
+  color: black;
+}
+/* line 116, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.room:hover {
+  text-decoration: none;
+}
+
+/* line 121, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-box {
+  width: 100%;
+  height: 78%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 128, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .msg-box {
+    height: 73%;
+  }
+}
+/* line 133, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#room-index {
+  padding: 10%;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 138, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  #room-index {
+    padding: 50px;
+  }
+}
+/* line 143, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#no-room {
+  margin: auto;
+}
+
+/* line 151, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#messages {
+  max-height: 550px;
+  min-height: 550px;
+  overflow-y: auto;
+}
+/* line 155, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#messages .avatar {
+  margin: 0.5rem;
+}
+
+/* line 160, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-input {
+  bottom: auto;
+  width: 58%;
+}
+
+@media only screen and (max-width: 1500px) {
+  /* line 166, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .msg-input {
+    width: 77%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* line 172, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .msg-input {
+    width: 90%;
+  }
+}
+/*Sticky Footer*/
+/* line 179, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+
+/* line 185, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 190, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.site-footer, .page-wrap:after {
+  height: 142px;
+}
+
+/* line 194, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.site-footer {
+  background-color: #573c7a;
+  color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* line 200, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .site-footer {
+    margin-top: 20%;
+  }
+}
+/*end of Sticky Footer*/
+/* line 207, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+footer {
+  bottom: 0px;
+  height: 50px;
+  background-color: #573c7a;
+}
