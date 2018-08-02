@@ -89,4 +89,4 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = ['https://chatterbocks.herokuapp.com',
                                                  'http://chatterbocks.herokuapp.com']
 
-  config.action_cable.url = "wss://chatterbocks.herokuapp.com/cable"
+  config.web_socket_server_url = "wss://chatterbocks.herokuapp.com/cable"
