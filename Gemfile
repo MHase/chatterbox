@@ -22,9 +22,11 @@ gem 'redis', '~> 3.2'
 
 gem 'devise'
 
-group :development do
+group :development, :test do
+  gem 'byebug'
   gem 'sqlite3'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :production do
@@ -34,3 +36,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'factory_bot_rails', '~> 4.0'
+gem 'rails-controller-testing'

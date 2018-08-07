@@ -14,7 +14,6 @@
   <nav class="navbar">
     <%= link_to 'ChatterBox', root_path, class: 'logo' %>
 
-
     <ul class="nav nav-pills pull-xs-right">
       <% if user_signed_in? %>
       <div class="dropleft">
@@ -22,6 +21,7 @@
           <span class="menu-label"><strong><%= current_user.name %></strong></span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to 'Profile', current_user, class: "dropdown-item" %>
           <%= link_to 'Account Settings', '#', class: "dropdown-item" %>
           <%= link_to 'Help', '#', class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
@@ -30,7 +30,7 @@
       </div>
       <% else %>
       <li class="nav-item">
-        <%= link_to 'Login', new_user_session_path, class: "nav-link"  %>
+        
       </li>
       <% end %>
     </ul>
