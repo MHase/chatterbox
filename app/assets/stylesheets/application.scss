@@ -122,6 +122,21 @@ h1 {
   }
 }
 
+/* Chat Room Index */
+
+.chat-room {
+  margin: auto;
+  width: 70%;
+}
+
+.chat-btns {
+  margin-left: 17%;
+}
+
+#delete:hover {
+  background-color: #d53549;
+}
+
 .msg-card{
   padding: 1%;
   border-bottom: 1px lightgray solid;
@@ -175,16 +190,19 @@ h1 {
   margin: auto;
 }
 
-#no-msg {
-
-}
-
 #messages {
   max-height: 550px;
   min-height: 550px;
   overflow-y: auto;
   .avatar {
     margin: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .chat-room {
+    margin: auto;
+    width: 100%;
   }
 }
 
@@ -210,7 +228,7 @@ h1 {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px;
+  margin-bottom: -71px;
 }
 
 .page-wrap:after {
@@ -219,7 +237,7 @@ h1 {
 }
 
 .site-footer, .page-wrap:after {
-  height: 142px;
+  height: 71px;
 }
 
 .site-footer {

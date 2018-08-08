@@ -11,10 +11,10 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
 
   def name
-    if first_name != ""
-      first_name
-    else
+    if first_name == ""
       email.split('@')[0]
+    else
+      first_name
     end
   end
 

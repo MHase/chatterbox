@@ -1,25 +1,27 @@
-<h1><%= @chat_room.title %></h1><p><%= @chat_room.description %></p>
+<div class="chat-room">
+  <h1><%= @chat_room.title %></h1><p><%= @chat_room.description %></p>
 
-<% if @chat_room.messages.size < 1 %>
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <h2 id="no-msg">Go ahead, type something in!</h2>
-</div>
-<% else %>
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <%= render @chat_room.messages %>
-</div>
-<% end %>
-
-<hr>
-
-<%= form_for @message, url: '#' do |f| %>
-<span class="msg-input">
-  <small class="text-muted">From 1 to 1000 characters</small>
-  <div class="input-group mb-3">
-    <%= f.text_field :body, class: "form-control", rows: 1, placeholder: "Message", aria_label:"Message", aria_describedby: "basic-addon2", autofocus: "autofocus", autocomplete: "off" %>
-    <div class="input-group-append">
-      <%= f.submit "Send", id: "send-buttons" %>
-    </div>
+  <% if @chat_room.messages.size < 1 %>
+  <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+    <h2 id="no-msg">Go ahead, type something in!</h2>
   </div>
-</span>
-<% end %>
+  <% else %>
+  <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+    <%= render @chat_room.messages %>
+  </div>
+  <% end %>
+
+  <hr>
+
+  <%= form_for @message, url: '#' do |f| %>
+  <span class="msg-input">
+    <small class="text-muted">From 1 to 1000 characters</small>
+    <div class="input-group mb-3">
+      <%= f.text_field :body, class: "form-control", rows: 1, placeholder: "Message", aria_label:"Message", aria_describedby: "basic-addon2", autofocus: "autofocus", autocomplete: "off" %>
+      <div class="input-group-append">
+        <%= f.submit "Send", id: "send-buttons" %>
+      </div>
+    </div>
+  </span>
+  <% end %>
+</div>
