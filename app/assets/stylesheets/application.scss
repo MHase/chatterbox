@@ -22,7 +22,6 @@ html{
 
 body {
   height: 100%;
-  background-color: #fff;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -51,7 +50,8 @@ body {
 
 .container {
   margin-top: 2%;
-  min-height: 100%;
+  height: auto;
+  min-width: 100%;
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -50px;
@@ -69,7 +69,7 @@ h1 {
   font-weight: bold;
   padding: 15px;
   &:hover {
-    background-color: #573c7a;
+    background-color: #turquoise;
     text-decoration: none;
     color: white;
     box-shadow: 1px 1px 10px black;
@@ -78,18 +78,45 @@ h1 {
   }
 }
 
+/* Login Screen */
+
+.login-page {
+  margin-top:10%;
+}
+
+.left-login {
+   h1{
+    margin-bottom: 3%;
+    top: 0px;
+  }
+  margin: auto;
+  margin-left: 0px;
+}
+
+.right-login {
+  float: right;
+  margin: auto;
+  margin-right: 0px;
+}
+
+/* Sign Up */
+
+.name-input {
+  display: flex;
+  justify-content:space-between;
+}
+
 .new-buttons {
   background-color: teal;
   transition: .5s;
   color: white;
   font-weight: bold;
   padding: 20px;
+  font-size: 1.5rem;
   &:hover {
-    background-color: #573c7a;
+    background-color: turquoise;
     text-decoration: none;
     color: white;
-    box-shadow: 1px 1px 10px black;
-    padding: 23px;
     transition: .5s;
     cursor: pointer;
   }
@@ -122,6 +149,10 @@ h1 {
   width: 100%;
   height:78%;
   overflow: hidden;
+}
+
+.form-group {
+  margin: 3% 0 3% 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -208,4 +239,5 @@ footer {
   bottom: 0px;
   height: 50px;
   background-color: #573c7a;
+  margin: 0px;
 }

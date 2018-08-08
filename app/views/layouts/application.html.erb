@@ -18,7 +18,14 @@
       <% if user_signed_in? %>
       <div class="dropleft">
         <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+          <% if current_user.full_name != "" %>
+          <span class="menu-label"><strong><%= current_user.full_name %></strong></span>
+          <% else %>
           <span class="menu-label"><strong><%= current_user.name %></strong></span>
+          <% end %>
+
+
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <%= link_to 'Profile', current_user, class: "dropdown-item" %>
@@ -30,7 +37,7 @@
       </div>
       <% else %>
       <li class="nav-item">
-        
+
       </li>
       <% end %>
     </ul>

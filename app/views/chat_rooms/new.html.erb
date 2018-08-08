@@ -2,8 +2,12 @@
 
 <%= form_for @chat_room do |f| %>
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+    <%= f.text_field :title, autofocus: true, class: 'form-control', placeholder: "Title" %>
+  </div>
+
+  <div class="form-group">
+    <small class="text-muted">Optional:</small>
+    <%= f.text_area :description, class: 'form-control', rows: 2, placeholder: "Description" %>
   </div>
 
   <%= f.submit "Create that room!", class: 'new-buttons' %>

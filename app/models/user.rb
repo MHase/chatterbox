@@ -4,10 +4,21 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :first_name, length: { maximum: 50 }
+  validates :last_name, length: { maximum: 50 }
+
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 
   def name
-    email.split('@')[0]
+    if first_name != ""
+      first_name
+    else
+      email.split('@')[0]
+    end
+  end
+
+  def full_name
+    first_name + " " + last_name
   end
 end
