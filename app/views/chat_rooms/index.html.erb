@@ -5,7 +5,7 @@
   <h1 id="no-room" align="center">Looks like this place is a little empty.  Why don't you make a room?</h1>
   <% else %>
   <ul class="row">
-    <%= render @chat_rooms.reverse # Display chat rooms chronological order %>
+    <%= render @chat_rooms.reverse %>
   </ul>
   <% end %>
   <br>
