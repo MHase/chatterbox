@@ -85,7 +85,7 @@ h1 {
 }
 
 .left-login {
-   h1{
+  h1{
     margin-bottom: 3%;
     top: 0px;
   }
@@ -131,13 +131,28 @@ h1 {
 
 /* Chat Room Index */
 
+.new-chat-btn {
+  float: right;
+}
+
 .chat-room {
   margin: auto;
   width: 70%;
 }
 
 .chat-btns {
-  margin-left: 17%;
+  margin-left: 28%;
+}
+
+@media only screen and (max-width: 900px) {
+  .chat-btns {
+    margin-left: 35%;
+  }
+}
+
+.room-row {
+  max-width: 100%;
+  justify-content: center;
 }
 
 #delete:hover {
@@ -160,7 +175,7 @@ h1 {
 
 .room {
   width: 18rem;
-  margin: 10px auto 10px auto;
+  margin: 2%;
   color: black;
   &:hover {
     text-decoration: none;
@@ -178,18 +193,20 @@ h1 {
 }
 
 @media only screen and (max-width: 900px) {
-    .msg-box {
-        height:73%;
-    }
+  .msg-box {
+    height:73%;
+  }
 }
 
 #room-index {
-  padding: 10%;
+  max-width: 45%;
+  margin: auto;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   #room-index {
     padding: 50px;
+    max-width: 100%;
   }
 }
 
@@ -219,15 +236,15 @@ h1 {
 }
 
 @media only screen and (max-width: 1500px) {
-    .msg-input {
-        width: 77%;
-    }
+  .msg-input {
+    width: 77%;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-    .msg-input {
-        width: 90%;
-    }
+  .msg-input {
+    width: 90%;
+  }
 }
 
 /*Sticky Footer*/
@@ -253,9 +270,9 @@ h1 {
 }
 
 @media only screen and (max-width: 1200px) {
-    .site-footer {
-        margin-top: 20%;
-    }
+  .site-footer {
+    margin-top: 20%;
+  }
 }
 
 /*end of Sticky Footer*/
