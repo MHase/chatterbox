@@ -1,6 +1,7 @@
 <h1>Chat rooms</h1>
 
 <p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'new-buttons new-chat-btn' %></p>
+<br>
 
 <div id="room-index">
   <% if @chat_rooms.size < 1 # Checks to see if room index is empty or not.%>

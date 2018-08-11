@@ -1,7 +1,20 @@
-<div class="profile" align="center">
+<div class="profile card" align="center">
 
-<%= gravatar_for @user %>
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<%= gravatar_for @user, size: "300px"; %>
+<hr>
 
-<%= @user.email %>
+<!-- TODO display user demographics and information -->
+
+<ul style="list-style-type:none">
+<li><h4>E-mail:</h2><p><%= @user.email %></p></li>
+<li><h4>About:</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh libero, dignissim non ligula. Sed non nunc feugiat quam varius interdum nec hendrerit augue.</p></li>
+<li><h4>City:</h4>Internet City</p></li>
+<li><h4>Interests:</h4><p>Making websites and stuff.</p></li>
+</ul>
+
+<% if @user == current_user %>
+<%= link_to "Edit Info", edit_user_registration_path, class: "new-buttons" %>
+<% end %>
 
 </div>
