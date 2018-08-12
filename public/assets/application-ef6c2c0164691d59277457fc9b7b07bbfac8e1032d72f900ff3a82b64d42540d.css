@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One");
+/* line 3, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 8, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+input, button {
+  border: none;
+}
+
+/* line 12, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+::-moz-selection {
+  background: #ffb7b7;
+  /* WebKit/Blink Browsers */
+}
+::selection {
+  background: #ffb7b7;
+  /* WebKit/Blink Browsers */
+}
+
+/* line 15, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+::-moz-selection {
+  background: #ffb7b7;
+  /* Gecko Browsers */
+}
+
+/* line 19, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+html {
+  height: 100%;
+}
+
+/* line 23, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+body {
+  height: 100%;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-image: url("funky-lines.png") !important;
+}
+
+/* Navbar */
+/* line 35, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.navbar-nav .nav-item span {
+  display: block;
+}
+
+/* line 39, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.navbar {
+  padding: 0px !important;
+  background-color: #573c7a;
+}
+
+/* line 44, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.logo {
+  font-size: 3rem;
+  color: lightgrey;
+  font-family: 'Fugaz One', cursive;
+}
+/* line 48, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.logo:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 54, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.profile-button {
+  height: 100%;
+  background-color: #573c7a;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+/* line 62, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.profile-button:hover {
+  background-color: #8A4ACE;
+  text-decoration: none;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+/* line 71, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.profile-button .dropdown-menu {
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  /* line 77, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .chat-btns {
+    margin-left: 42%;
+  }
+}
+/* line 82, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.container {
+  margin-top: 2%;
+  height: auto;
+  min-width: 100%;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+/* line 91, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 96, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#send-buttons {
+  background-color: teal;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+/* line 102, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#send-buttons:hover {
+  background-color: turquoise;
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 1px 10px black;
+  transition: .5s;
+  cursor: pointer;
+}
+
+/* Login Screen */
+/* line 114, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.login-page {
+  margin-top: 10%;
+}
+
+/* line 118, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.left-login {
+  margin: auto;
+  margin-left: 0px;
+}
+/* line 119, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.left-login h1 {
+  margin-bottom: 3%;
+  top: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  /* line 128, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .left-login {
+    margin-bottom: 10%;
+    border-bottom: 1px lightgray solid;
+  }
+}
+/* line 134, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.right-login {
+  float: right;
+  margin: auto;
+  margin-right: 0px;
+}
+
+/* Sign Up */
+/* line 142, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.name-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 147, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.new-buttons {
+  background-color: teal;
+  transition: .5s;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+/* line 154, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.new-buttons:hover {
+  background-color: turquoise;
+  text-decoration: none;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+/* Chat Room Index */
+/* line 165, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+a.card.room h2 {
+  margin-top: 5%;
+}
+
+/* line 169, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.lead {
+  margin: auto 50px auto 50px;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 174, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .lead {
+    margin: auto 30px 50px 30px;
+  }
+}
+/* line 179, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.chat-room {
+  margin: auto;
+  width: 70%;
+}
+
+/* line 184, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.chat-btns {
+  margin-left: 45%;
+}
+
+@media only screen and (max-width: 700px) {
+  /* line 189, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .chat-btns {
+    margin-left: 42%;
+  }
+}
+/* line 194, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.room-row {
+  max-width: 100%;
+  justify-content: center;
+}
+
+/* line 199, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#delete:hover {
+  background-color: #d53549;
+}
+
+/* line 203, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-card {
+  background-color: white;
+  padding: 1%;
+  border-bottom: 1px lightgray solid;
+}
+
+/* line 209, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.card-header {
+  padding: .35rem .75rem !important;
+}
+
+/* line 213, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-card:hover,
+.room:hover {
+  background-color: #f7f7f7;
+}
+
+/* line 218, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.room {
+  width: 18rem;
+  margin: 2%;
+  color: black;
+}
+/* line 222, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.room:hover {
+  text-decoration: none;
+}
+
+/* line 227, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-box {
+  width: 100%;
+  height: 78%;
+  overflow: hidden;
+}
+
+/* line 233, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.form-group {
+  margin: 3% 0 3% 0;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 238, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .msg-box {
+    height: 73%;
+  }
+}
+/* line 243, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#room-index {
+  max-width: 45%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1100px) {
+  /* line 249, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  #room-index {
+    padding: 50px;
+    max-width: 100%;
+  }
+}
+/* line 255, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#no-room {
+  margin: auto;
+}
+
+/* line 259, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#messages {
+  max-height: 550px;
+  min-height: 550px;
+  overflow-y: auto;
+}
+/* line 263, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+#messages .avatar {
+  margin: 0.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 269, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .chat-room {
+    margin: auto;
+    width: 100%;
+  }
+}
+/* line 275, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.msg-input {
+  bottom: auto;
+  width: 58%;
+}
+
+@media only screen and (max-width: 1500px) {
+  /* line 281, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .msg-input {
+    width: 77%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* line 287, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .msg-input {
+    width: 90%;
+  }
+}
+/* Profile Page */
+/* line 294, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.profile,
+.form-align {
+  border-radius: 15px !important;
+  margin: auto;
+  width: 35%;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 800px) {
+  /* line 303, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .profile,
+  .form-align {
+    border-radius: 15px !important;
+    margin: auto;
+    width: 100%;
+  }
+}
+/*Sticky Footer*/
+/* line 313, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -71px;
+}
+
+/* line 319, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 324, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.site-footer, .page-wrap:after {
+  height: 71px;
+}
+
+/* line 328, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+.site-footer {
+  background-color: #573c7a;
+  color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* line 334, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+  .site-footer {
+    margin-top: 20%;
+  }
+}
+/*end of Sticky Footer*/
+/* line 341, /home/matthew/Desktop/WebDev/chatterbox/app/assets/stylesheets/application.scss */
+footer {
+  bottom: 0px;
+  height: 50px;
+  background-color: #573c7a;
+  margin: 0px;
+}
