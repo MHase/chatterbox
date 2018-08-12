@@ -1,16 +1,20 @@
 <%= link_to chat_room_path(chat_room), class: "card room", align: "center" do %>
 
-
-<div class="btn-group">
+<div class="card-header btn-group">
   <small class="chat-date text-muted">
     Posted <%= "#{time_ago_in_words(chat_room.created_at)} ago" %>
   </small>
-  <span class="chat-btns btn-group">
-    <button type="button" id="bookmark" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Bookmark this room"><i class="far fa-bookmark"></i></button> <!-- Make button prioritize room to current user -->
-    <button type="button" id="delete" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Hide this room from me"><i class="fas fa-times"></i></button> <!-- Make button hide rooms from current user -->
-  </span>
+  <div class="btn-group chat-btns">
+  <button type="button" class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-ellipsis-h"></i>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">Hide This Room</button>
+    <button class="dropdown-item" type="button">Bookmark This Room</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
 </div>
-<hr>
+</div>
 <h2><%= "#{chat_room.title}" %></h2>
 <p><strong><%= "#{chat_room.messages.size}" %></strong>
 
