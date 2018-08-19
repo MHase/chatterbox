@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   validates :first_name, length: { maximum: 50 }
   validates :last_name, length: { maximum: 50 }
+  validates :city, length: { maximum: 50 }
+  validates :about, length: { maximum: 250 }
+  validates :interests, length: { maximum: 125 }
 
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
