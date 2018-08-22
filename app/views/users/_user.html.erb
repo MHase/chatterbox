@@ -2,21 +2,27 @@
 
 <div class="profile card" align="center">
 
-<h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<%= gravatar_for @user, size: "300px"; %>
-<hr>
+  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  <%= gravatar_for @user, size: "300px"; %>
+  <hr>
 
-<!-- TODO display user demographics and information -->
+  <!-- TODO display user demographics and information -->
 
-<ul style="list-style-type:none">
-<li><p><%= @user.email %></p></li>
-<li><p><%= @user.city %>, <%= @user.state %></p></li>
-<li><p><%= @user.about %></p></li>
-<li><p><%= @user.interests %></p></li>
-</ul>
+  <ul style="list-style-type:none">
+    <li><p><%= @user.email %></p></li>
 
-<% if @user == current_user %>
-<%= link_to "Edit Info", edit_user_registration_path, class: "new-buttons" %>
-<% end %>
+    <% if @user.city && @user.state != nil %>
+      <li><p>Located in: <a target="_blank" href="https://www.google.com/maps/place/<%= @user.city %>, <%= @user.state %>"><%= @user.city + ", " + @user.state %></a></p></li>
+    <% else %>
+      <%= @user.city || @user.state %>
+    <% end %>
+
+    <li><p><%= @user.about %></p></li>
+    <li><p><%= @user.interests %></p></li>
+  </ul>
+
+  <% if @user == current_user %>
+  <%= link_to "Edit Info", edit_user_registration_path, class: "new-buttons" %>
+  <% end %>
 
 </div>
