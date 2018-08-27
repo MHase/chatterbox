@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' %>
 </head>
 
 <body>
@@ -20,6 +21,7 @@
 
       <div class="dropdown profile-button">
         <span class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= gravatar_for current_user, size: "40px", class: "avatar"; %>
           <% if current_user.first_name == "" %>
           <span class="menu-label"><strong><%= current_user.name %></strong></span>
           <% else %>
@@ -43,6 +45,12 @@
       <% end %>
     </ul>
   </nav>
+  <% if notice %>
+    <p class="notice alert-dark" align="center" role="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p class="alert alert-danger" align="center" role="alert"><%= alert %></p>
+    <% end %>
   <div class="page-wrap">
     <div class="container">
       <%= yield %>
@@ -53,7 +61,6 @@
     <p style="color:white;">ChatterBox</p>
   </footer>
 </body>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

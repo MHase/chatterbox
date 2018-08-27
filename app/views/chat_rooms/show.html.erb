@@ -1,20 +1,31 @@
 <% provide(:title, @chat_room.title) %>
 
 <div class="chat-room">
-  <h1><%= @chat_room.title %></h1><p><%= @chat_room.description %></p>
+  <span class="card">
+    <h1 class="card-header"><%= @chat_room.title %>
+      <div class="float-right">
+        <button type="button" class="btn btn-light room-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-ellipsis-h"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" type="button">Hide This Room</button>
+          <button class="dropdown-item" type="button">Bookmark This Room</button>
+          <button class="dropdown-item" type="button">Something else here</button>
+        </div>
+      </div>
+    </h1>
+    <p><%= @chat_room.description %></p>
 
-  <% if @chat_room.messages.size < 1 %>
-  <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-    <h2 id="no-msg">Go ahead, type something in!</h2>
-  </div>
-  <% else %>
-  <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-    <%= render @chat_room.messages %>
-  </div>
-  <% end %>
-
-  <hr>
-
+    <% if @chat_room.messages.size < 1 %>
+    <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+      <h2 id="no-msg">Go ahead, type something in!</h2>
+    </div>
+    <% else %>
+    <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+      <%= render @chat_room.messages %>
+    </div>
+    <% end %>
+  </span>
   <%= form_for @message, url: '#' do |f| %>
   <span class="msg-input">
     <small class="text-muted">From 1 to 1000 characters</small>

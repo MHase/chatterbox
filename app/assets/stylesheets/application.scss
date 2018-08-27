@@ -30,6 +30,15 @@ body {
   background-image: url("funky-lines.png") !important;
 }
 
+.dropdown-menu {
+  margin-top: 0px !important;
+  box-shadow: 2px 2px 10px slategray;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
 /* Navbar */
 
 .navbar-nav .nav-item span {
@@ -42,6 +51,7 @@ body {
 }
 
 .logo {
+  margin-left: 20%;
   font-size: 3rem;
   color: lightgrey;
   font-family: 'Fugaz One', cursive;
@@ -49,6 +59,10 @@ body {
     text-decoration: none;
     color: white;
   }
+}
+
+.nav-pills {
+  margin-right: 20%;
 }
 
 .profile-button {
@@ -98,7 +112,7 @@ h1 {
   transition: .5s;
   color: white;
   font-weight: bold;
-  padding: 15px;
+  padding: 7px;
   &:hover {
     background-color: turquoise;
     text-decoration: none;
@@ -167,18 +181,22 @@ a.card.room h2 {
 }
 
 .lead {
-  margin: auto 50px auto 50px;
+  margin: auto 60px 80px 60px;
 }
 
 @media only screen and (max-width: 500px) {
   .lead {
-    margin: auto 30px 50px 30px;
+    margin: auto 10px 50px 10px;
   }
 }
 
 .chat-room {
   margin: auto;
   width: 70%;
+}
+
+.room-options {
+  border-radius: 35px !important;
 }
 
 .chat-btns {
@@ -194,6 +212,7 @@ a.card.room h2 {
 .room-row {
   max-width: 100%;
   justify-content: center;
+  margin: 0px !important;
 }
 
 #delete:hover {
@@ -213,12 +232,15 @@ a.card.room h2 {
 .msg-card:hover,
 .room:hover {
   background-color: #f7f7f7;
+  box-shadow: 2px 2px 20px slategray;
+  transition: .7s;
 }
 
 .room {
   width: 18rem;
   margin: 2%;
   color: black;
+  transition: .7s;
   &:hover {
     text-decoration: none;
   }
@@ -241,7 +263,7 @@ a.card.room h2 {
 }
 
 #room-index {
-  max-width: 45%;
+  max-width: 65%;
   margin: auto;
 }
 
@@ -256,6 +278,8 @@ a.card.room h2 {
   margin: auto;
 }
 
+/* Messages */
+
 #messages {
   max-height: 550px;
   min-height: 550px;
@@ -263,6 +287,10 @@ a.card.room h2 {
   .avatar {
     margin: 0.5rem;
   }
+}
+
+#no-msg {
+  margin: 15%;
 }
 
 @media only screen and (max-width: 500px) {

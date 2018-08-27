@@ -9,7 +9,7 @@
 
   <br />
 
-  <h2>Personal Information</h2>
+  <h2 class="card-header">Personal Information</h2>
   <div class="row">
     <div class="col">
       <div class="field">
@@ -42,7 +42,7 @@
 
   <br />
 
-  <h2>Location</h2>
+  <h2 class="card-header">Location</h2>
   <div class="row">
     <div class="col">
       <div class="field">
@@ -64,7 +64,7 @@
 
     <br />
 
-    <h2>Passwords</h2>
+    <h2 class="card-header">Passwords</h2>
     <div class="field">
       <br />
       <i class="text-muted">(Leave blank if you don't want to change it)</i><br />
@@ -78,7 +78,8 @@
 
     <div class="field">
       <br />
-      <%= f.label :current_password %> <i class="text-muted">(Required)</i><br />
+      <hr>
+      <%= f.label :current_password %> <i class="text-muted">(Required to submit any changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: 'Current Password' %>
     </div>
 
@@ -95,7 +96,7 @@
   <br />
   <div class="form-align card">
 
-    <h3>Close my account</h3>
+    <h3 class="card-header">Close my account</h3>
 
     <p>Want to close your account?  We wish you wouldn't, but the choice is yours.  This will permenently delete your account and everything associated with it.<%= button_to "Close my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
 
