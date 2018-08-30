@@ -65,6 +65,15 @@ body {
   margin-right: 20%;
 }
 
+@media only screen and (max-width: 800px) {
+  .logo {
+    margin-left: 0%;
+  }
+  .nav-pills {
+    margin-right: 0%;
+  }
+}
+
 .profile-button {
   height: 100%;
   background-color: #573c7a;
@@ -192,7 +201,14 @@ a.card.room h2 {
 
 .chat-room {
   margin: auto;
-  width: 70%;
+  width: 62%;
+}
+
+@media only screen and (max-width: 800px) {
+  .chat-room {
+    margin: 0px !important;
+    width: 100% !important;
+  }
 }
 
 .room-options {
