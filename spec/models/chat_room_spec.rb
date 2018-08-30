@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ChatRoom do
+describe ChatRoom, type: :model do
 
   it "should not be valid without title" do
     expect(ChatRoom.new(title: " ")).not_to be_valid

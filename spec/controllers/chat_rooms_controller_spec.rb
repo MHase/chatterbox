@@ -15,4 +15,20 @@ describe ChatRoomsController, type: :controller do
     end
   end
 
+  context 'GET #new' do
+    it 'renders the new chat room form page' do
+      get :new
+      expect(response).to be_ok
+      expect(response).to render_template(:new)
+    end
+  end
+
+  context 'GET #show' do
+    it 'renders the chat room show page' do
+      get :show, params: { id: '1' }
+      expect(response).to be_ok
+      expect(response).to render_template(:show)
+    end
+  end
+
 end
