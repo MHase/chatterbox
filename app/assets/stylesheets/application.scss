@@ -249,6 +249,15 @@ a.card.room h2 {
   padding: .35rem .75rem !important;
 }
 
+.profile-header {
+  border: 1px lightgray solid;
+  margin-bottom: 5% !important;
+}
+
+h2.card-header.profile-header {
+  margin-bottom: 0 !important;
+}
+
 .msg-card:hover,
 .room:hover {
   background-color: #f7f7f7;

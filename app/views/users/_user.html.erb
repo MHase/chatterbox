@@ -2,7 +2,7 @@
 
 <div class="profile card" align="center">
 
-  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  <h1 class="card-header profile-header"><%= @user.first_name %> <%= @user.last_name %></h1>
   <%= gravatar_for @user, size: "300px"; %>
   <hr>
 
