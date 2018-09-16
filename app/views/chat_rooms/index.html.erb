@@ -1,7 +1,7 @@
 <% provide(:title, "Rooms") %>
 
 <div id="room-index">
-  <!-- TODO Make header display your geological location -->
+  <!-- Display user geological location -->
   <h1 align="center">Chat rooms in <%= request.location.city %></h1>
   <br>
   <% if @chat_rooms.size < 1 # Checks to see if room index is empty or not.%>
