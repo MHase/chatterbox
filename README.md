@@ -19,3 +19,4 @@ ChatterBox is currently an ambitious work in progress and has many features that
 - [ ] Fine tune location service to be more accurate for cell phones.
 - [ ] Create a way to save a user location so they can access chat rooms from only one area even after they left it ("Anchoring").
 - [ ] Make "meet-up" chat rooms visible as events on a graphical map (nice to have).
+- [ ] Redesign front-end to make it look REALLY good.
